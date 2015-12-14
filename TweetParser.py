@@ -13,7 +13,6 @@ def parseTweet(jsondata):
 
 			""" gets some attributes from tweet
           		id
-          		created_at
           		username(screen_name)
           		tweet text
           		we could get other attibutes like:
@@ -22,12 +21,10 @@ def parseTweet(jsondata):
           		...
       		"""
 			tweetId = dict['id']
-			createdAt = dict['created_at']
 			screenName = dict['user']['screen_name']
 			tweetText = dict['text'].replace('\n',' ').replace('\t',' ').replace('\r',' ')
 
-#           text = '%d\t%s\t%s\t%s\t%s' % (dict['id'],dict['created_at'],dict['user']['screen_name'],tweetText)
-			output = '%d\t%s\t%s\t%s' % (tweetId, createdAt, screenName, tweetText)
+			output = '%d\t%s\t%s' % (tweetId, screenName, tweetText)
 			print output.encode('utf8') 
 
 	except:
@@ -108,4 +105,16 @@ if __name__ == '__main__':
 		parseFile(inputFile)
 	else:
 		parseDir(inputDir)
+
+
+
+
+
+
+
+
+
+
+
+
 
