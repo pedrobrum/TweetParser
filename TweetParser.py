@@ -52,7 +52,6 @@ def parseDir(inputDir):
 def parseFile(inputFile):
 
 	try:
-		logFileHandle = codecs.open(inputFile, 'r', 'utf-8')
 	
 		if inputFile.endswith(".json"):
 			parseFile_json(inputFile, inputFile)
@@ -79,7 +78,6 @@ def parseFile_json(filepath, archive):
 
 	count = 0
 
-	logFileHandle = codecs.open(filepath, 'r', 'utf-8')
 	for line in file(filepath):
 		parseTweet(line)
 		count += 1
@@ -106,5 +104,16 @@ if __name__ == '__main__':
 		parseFile(inputFile)
 	else:
 		parseDir(inputDir)
+
+
+
+
+
+
+
+
+
+
+
 
 
