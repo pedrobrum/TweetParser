@@ -11,7 +11,7 @@ def parseTweet(jsondata):
 
 		if 'text' in dict.keys():
 
-			""" gets some attributes from tweet
+		""" gets some attributes from tweet
           		createdAt
           		username(screen_name)
           		tweet text
@@ -106,3 +106,5 @@ if __name__ == '__main__':
 		parseFile(inputFile)
 	else:
 		parseDir(inputDir)
+
+
